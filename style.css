@@ -23,7 +23,6 @@ body {
 }
 
 /* --- VIGNETTE EFFECT --- */
-/* This creates the dark corners on the screen */
 body::before {
     content: "";
     position: fixed;
@@ -38,7 +37,7 @@ body::before {
 
 /* --- TYPOGRAPHY --- */
 h1, h2, h3, .logo {
-    font-family: 'Bebas Neue', sans-serif; /* The cinematic tall font */
+    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -189,7 +188,7 @@ main {
     gap: 15px;
     overflow-x: auto;
     padding-bottom: 20px;
-    scrollbar-width: thin; /* Firefox */
+    scrollbar-width: thin; 
     scrollbar-color: var(--netflix-red) var(--bg-black);
 }
 
@@ -213,7 +212,7 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.1); /* The Netflix hover effect */
+    transform: scale(1.1); 
     z-index: 10;
     box-shadow: 0 10px 20px rgba(0,0,0,0.8);
     border: 1px solid var(--text-gray);
@@ -224,18 +223,29 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Bebas Neue';
-    font-size: 2rem;
-    color: rgba(255,255,255,0.5);
+    /* Removed old font setting, using FontAwesome now */
+    color: rgba(255,255,255,0.9);
     background: linear-gradient(135deg, #222, #000);
 }
 
-/* Different fake "poster" colors for subjects */
-.logic-bg { background: linear-gradient(45deg, #4b0d0d, #000); }
-.cpp-bg { background: linear-gradient(45deg, #0d1a4b, #000); }
-.tis-bg { background: linear-gradient(45deg, #0d4b1a, #000); }
-.math-bg { background: linear-gradient(45deg, #4b3d0d, #000); }
-.ethics-bg { background: linear-gradient(45deg, #2a0d4b, #000); }
+/* --- NEW: ICON STYLING --- */
+.card-image i {
+    font-size: 3.5rem; /* Large Icons */
+    drop-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.card:hover .card-image i {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Background Gradients for Cards */
+.logic-bg { background: linear-gradient(45deg, #5e1b1b, #000); }
+.cpp-bg { background: linear-gradient(45deg, #1b265e, #000); }
+.tis-bg { background: linear-gradient(45deg, #1b5e2a, #000); }
+.math-bg { background: linear-gradient(45deg, #5e4d1b, #000); }
+.ethics-bg { background: linear-gradient(45deg, #381b5e, #000); }
 
 .card-info {
     padding: 10px;
@@ -248,7 +258,7 @@ main {
 }
 
 .card-info p {
-    color: #46d369; /* The "Match" green color */
+    color: #46d369; /* Netflix "Match" green */
     font-size: 0.8rem;
     font-weight: bold;
 }
