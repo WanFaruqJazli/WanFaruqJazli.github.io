@@ -7,6 +7,58 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .info-card {
+            background-color: var(--bg-dark-gray);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--netflix-red);
+        }
+
+        .family-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+
+        .profile-img-large {
+            width: 100%;
+            border-radius: 8px;
+            border: 4px solid var(--netflix-red);
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+        }
+
+        .fact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(255,255,255,0.05);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .fact-item i {
+            color: var(--netflix-red);
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,49 +68,104 @@
     </nav>
 
     <main>
-        <h1 class="category-title" style="margin-top: 20px;">About Me</h1>
         
-        <div class="grid-2-col" style="margin-top: 10px;">
-            <div>
-                <img src="images/myself.jpeg" alt="Profile" style="width: 100%; border-radius: 8px; border: 2px solid var(--netflix-red);">
-            </div>
-            
-            <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Wan Faruq Jazli</h2>
-                
-                <h3 style="color: var(--netflix-red); margin-bottom: 10px;">Background & Education</h3>
-                <p class="description">
-                    Hello! I am Wan Faruq Jazli bin Wan Ahmad Jaffry. I am the third child in my family and I come from Chukai, Terengganu.
-                </p>
-                <p class="description">
-                    My passion for technology started early; I began learning Computer Science in Form 4 at <strong>SMK Chukai</strong>. 
-                    I later furthered my studies in Physical Science at <strong>Kolej Matrikulasi Johor (KMJ)</strong>, 
-                    and I am now currently majoring in Bachelor of Computer Science (Data Engineering) at <strong>UTM</strong>.
-                </p>
-
-                <h3 style="color: var(--netflix-red); margin-top: 20px; margin-bottom: 10px;">Interests & Hobbies</h3>
-                <p class="description">
-                    I enjoy coding and gaming. My favorite competitive game is <strong>Mobile Legends: Bang Bang (MLBB)</strong>, 
-                    and I had the honor of representing KTR in the UTMGames for MLBB Esports. 
-                    When I'm not coding or gaming, I enjoy watching Anime and K-Dramas.
-                </p>
-                
-                <h3 style="color: var(--netflix-red); margin-top: 20px; margin-bottom: 10px;">Leadership</h3>
-                <ul class="styled-list">
-                    <li><strong>UTM:</strong> Committee Member SUSKOM'25, E-Sports Athlete (MLBB)</li>
-                    <li><strong>KMJ:</strong> Committee Member (Equipment Bureau) College Election</li>
-                    <li><strong>SMK Chukai:</strong> President of RBT Club (2024), Treasurer (2023)</li>
-                </ul>
-
-                <h3 style="color: var(--netflix-red); margin-top: 20px; margin-bottom: 10px;">Fun Facts</h3>
-                <ul class="styled-list">
-                    <li><i class="fa-solid fa-cake-candles"></i> <strong>Birthday:</strong> 21st May</li>
-                    <li><i class="fa-solid fa-moon"></i> <strong>Night Owl:</strong> I am most productive at night and rarely sleep early.</li>
-                    <li><i class="fa-solid fa-candy-cane"></i> <strong>Food:</strong> I have a sweet tooth, but I absolutely cannot stand spicy food!</li>
-                </ul>
-
-            </div>
+        <div class="about-header">
+            <h1 class="category-title" style="display: inline-block; border: none; font-size: 4rem;">WHO IS WAN FARUQ?</h1>
+            <p class="description" style="margin: 0 auto;">Aspiring Data Engineer • Gamer • Problem Solver</p>
         </div>
+
+        <section class="content-block">
+            <div class="grid-2-col" style="align-items: center;">
+                <div>
+                    <img src="images/myself.jpeg" alt="Wan Faruq Jazli" class="profile-img-large">
+                </div>
+                
+                <div class="info-card">
+                    <h2 style="font-size: 2rem; margin-bottom: 15px; color: var(--netflix-red);">Academic Journey</h2>
+                    <p class="description">
+                        My passion for technology started early; I began learning Computer Science in Form 4 at <strong>SMK Chukai</strong>. 
+                        I later furthered my studies in Physical Science at <strong>Kolej Matrikulasi Johor (KMJ)</strong>.
+                    </p>
+                    <p class="description">
+                        Currently, I am majoring in <strong>Bachelor of Computer Science (Data Engineering)</strong> at Universiti Teknologi Malaysia (UTM). 
+                        I am fascinated by how systems work and have evolved a deep passion for software development, data analysis, and logic design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <div class="grid-2-col">
+                <div class="info-card">
+                    <h2 style="font-size: 2rem; margin-bottom: 15px; color: var(--netflix-red);">My Roots & Family</h2>
+                    <p class="description">
+                        Hello! I am Wan Faruq Jazli bin Wan Ahmad Jaffry. I come from the beautiful town of <strong>Chukai, Terengganu</strong>.
+                    </p>
+                    <p class="description">
+                        I am the <strong>third child</strong> in my family. Growing up in a supportive environment helped shape my competitive yet collaborative nature.
+                    </p>
+                    
+                    <img src="images/myself.jpeg" alt="My Family" class="family-img"> 
+                    <p style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 5px;">(Placeholder: Insert your family photo here)</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <div class="info-card">
+                        <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-gamepad"></i> Interests & Hobbies</h3>
+                        <p class="description">
+                            I enjoy coding and gaming. My favorite competitive game is <strong>Mobile Legends: Bang Bang (MLBB)</strong>.
+                            I even had the honor of representing <strong>KTR (Kolej Tun Razak)</strong> in the UTMGames for MLBB Esports.
+                        </p>
+                        <p class="description">
+                            When I'm not coding or gaming, I enjoy watching Anime and K-Dramas to unwind.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-flag"></i> Leadership</h3>
+                        <ul class="styled-list">
+                            <li><strong>UTM:</strong> Committee Member SUSKOM'25, E-Sports Athlete (MLBB)</li>
+                            <li><strong>KMJ:</strong> Committee Member (Equipment Bureau) College Election</li>
+                            <li><strong>SMK Chukai:</strong> President of RBT Club (2024), Treasurer (2023)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h2 class="category-title">Fun Facts About Me</h2>
+            <div class="grid-2-col" style="grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                
+                <div class="fact-item">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <div>
+                        <strong style="display: block; color: white;">Birthday</strong>
+                        <span style="color: #b3b3b3; font-size: 0.9rem;">21st May</span>
+                    </div>
+                </div>
+
+                <div class="fact-item">
+                    <i class="fa-solid fa-moon"></i>
+                    <div>
+                        <strong style="display: block; color: white;">Night Owl</strong>
+                        <span style="color: #b3b3b3; font-size: 0.9rem;">Most productive at night</span>
+                    </div>
+                </div>
+
+                <div class="fact-item">
+                    <i class="fa-solid fa-candy-cane"></i>
+                    <div>
+                        <strong style="display: block; color: white;">Sweet Tooth</strong>
+                        <span style="color: #b3b3b3; font-size: 0.9rem;">Can't stand spicy food!</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
