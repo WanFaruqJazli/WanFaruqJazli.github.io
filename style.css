@@ -316,6 +316,7 @@ main {
 /* --- ACADEMIC COURSES (YEAR/SEM INTERACTION) --- */
 .view-container {
     transition: opacity 0.3s ease;
+    width: 100%;
 }
 
 .view-container.hidden {
@@ -329,11 +330,13 @@ main {
     text-align: center;
 }
 
+/* Updated to make Year Selection Wider */
 .year-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Force 4 columns for year view */
     gap: 20px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .year-card {
@@ -420,6 +423,7 @@ main {
     padding-bottom: 20px;
     scrollbar-width: thin; 
     scrollbar-color: var(--netflix-red) var(--bg-black);
+    width: 100%; /* Ensure full width */
 }
 
 .card-scroller::-webkit-scrollbar {
@@ -432,7 +436,7 @@ main {
 }
 
 .card {
-    min-width: 220px;
+    min-width: 250px; /* Slightly wider cards */
     background-color: var(--bg-dark-gray);
     border-radius: 4px;
     overflow: hidden;
@@ -440,6 +444,7 @@ main {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     border: 1px solid #333;
+    flex-shrink: 0;
 }
 
 .card:hover {
@@ -581,6 +586,11 @@ footer {
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Adjust Year Grid for Mobile */
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid for mobile */
     }
 }
 
