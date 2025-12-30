@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wan Faruq Jazli | Data Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -31,6 +31,10 @@
 
     <header class="hero">
         <div class="hero-content">
+            <div class="profile-container">
+                <img src="images/myself.jpeg" alt="Wan Faruq Jazli" class="profile-frame">
+            </div>
+            
             <div class="hero-text">
                 <h2 class="sub-title">ASPIRING DATA ENGINEER</h2>
                 <h1 class="main-title">WAN FARUQ JAZLI</h1>
@@ -61,23 +65,23 @@
                 <ul class="about-list">
                     <li>
                         <i class="fa-solid fa-graduation-cap icon-red"></i> 
-                        <span>First-year Bachelor of Computer Science (Data Engineering) with Honors student at UTM (Cohort 10).</span>
+                        First-year Bachelor of Computer Science (Data Engineering) with Honors student at UTM (Cohort 10).
                     </li>
                     <li>
                         <i class="fa-solid fa-laptop-code icon-red"></i> 
-                        <span>Interested in coding and continuously exploring new technical skills.</span>
+                        Interested in coding and continuously exploring new technical skills.
                     </li>
                     <li>
                         <i class="fa-solid fa-layer-group icon-red"></i> 
-                        <span>Currently learning C++, with plans to explore other programming languages.</span>
+                        Currently learning C++, with plans to explore other programming languages.
                     </li>
                     <li>
                         <i class="fa-solid fa-futbol icon-red"></i> 
-                        <span>Enjoys indoor/outdoor sports and video games during free time.</span>
+                        Enjoys indoor/outdoor sports and video games during free time.
                     </li>
                     <li>
                         <i class="fa-solid fa-rocket icon-red"></i> 
-                        <span>Aspires to become a Data Engineer and work at my dream company.</span>
+                        Aspires to become a Data Engineer and work at my dream company.
                     </li>
                 </ul>
             </div>
@@ -89,30 +93,45 @@
                 
                 <div class="skill-card">
                     <h3><i class="fa-solid fa-computer"></i> Technical</h3>
-                    <div class="skill-item"><span>C++</span> <span class="badge">Basic</span></div>
-                    <div class="skill-item"><span>Java</span> <span class="badge">Basic</span></div>
-                    <div class="skill-item"><span>Git / GitHub</span> <span class="badge">Basic</span></div>
-                    <div class="skill-item"><span>Microsoft Office</span> <span class="badge">Proficient</span></div>
-                    <div class="skill-item"><span>Google Docs</span> <span class="badge">Proficient</span></div>
-                    <div class="skill-item"><span>Canva / CapCut</span> <span class="badge">Basic</span></div>
-                    <div class="skill-item"><span>Github/Git</span> <span class="badge">Beginner</span></div>
+                    <div class="skill-item">
+                        <span>C++</span> <span class="badge">Basic</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>Java</span> <span class="badge">Basic</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>Microsoft Office</span> <span class="badge">Proficient</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>Google Docs</span> <span class="badge">Proficient</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>Canva / CapCut</span> <span class="badge">Basic</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>Github/Git</span> <span class="badge">Beginner</span>
+                    </div>
                 </div>
 
                 <div class="skill-card">
                     <h3><i class="fa-solid fa-handshake"></i> Soft Skills</h3>
                     <div class="skill-list-simple">
                         <p>Teamwork</p>
-                        <p>Time management</p>
-                        <p>Adaptability</p>
-                        <p>Problem-solving</p>
+                        <p>adaptability</p>
                         <p>Communication</p>
+                        <p>Problem-solving</p>
+                        <p>Time Management</p>
                     </div>
                 </div>
 
                 <div class="skill-card">
                     <h3><i class="fa-solid fa-language"></i> Languages</h3>
-                    <div class="skill-item"><span>Bahasa Melayu</span> <span class="badge gold">Native</span></div>
-                    <div class="skill-item"><span>English</span> <span class="badge dark">Fluent</span></div>
+                    <div class="skill-item">
+                        <span>Bahasa Melayu</span> <span class="badge gold">Native</span>
+                    </div>
+                    <div class="skill-item">
+                        <span>English</span> <span class="badge dark">Fluent</span>
+                    </div>
                 </div>
 
             </div>
@@ -145,8 +164,8 @@
 
             <div id="semester-view" class="view-container hidden">
                 <div class="nav-header">
-                    <p class="view-subtitle">Year 1 - Select Semester</p>
                     <button class="back-btn" onclick="showYears()"><i class="fa-solid fa-arrow-left"></i> Back to Years</button>
+                    <p class="view-subtitle">Year 1 - Select Semester</p>
                 </div>
                 
                 <div class="year-grid"> 
@@ -163,11 +182,12 @@
 
             <div id="repo-view" class="view-container hidden">
                 <div class="nav-header">
-                    <p class="view-subtitle">Year 1 - Semester 1 Coursework</p>
                     <button class="back-btn" onclick="showSemesters()"><i class="fa-solid fa-arrow-left"></i> Back to Semesters</button>
+                    <p class="view-subtitle">Year 1 - Semester 1 Coursework</p>
                 </div>
 
                 <div class="card-scroller">
+                    
                     <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECR1013-Digital-Logic" target="_blank" class="card">
                         <div class="card-image logic-bg"><i class="fa-solid fa-microchip"></i></div>
                         <div class="card-info">
@@ -175,6 +195,7 @@
                             <p>Logic Gates & Circuits</p>
                         </div>
                     </a>
+
                     <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECJ1013-Programming-1" target="_blank" class="card">
                         <div class="card-image cpp-bg"><i class="fa-solid fa-code"></i></div>
                         <div class="card-info">
@@ -182,6 +203,7 @@
                             <p>C++ Problem Solving</p>
                         </div>
                     </a>
+
                     <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECP1513-TIS" target="_blank" class="card">
                         <div class="card-image tis-bg"><i class="fa-solid fa-network-wired"></i></div>
                         <div class="card-info">
@@ -189,6 +211,7 @@
                             <p>Design Thinking & IS</p>
                         </div>
                     </a>
+
                     <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECI1013-Discrete-Structure" target="_blank" class="card">
                         <div class="card-image math-bg"><i class="fa-solid fa-diagram-project"></i></div>
                         <div class="card-info">
@@ -196,6 +219,7 @@
                             <p>Set Theory & Logic</p>
                         </div>
                     </a>
+
                     <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/ULRS1032-Integrity%20and%20Anti-Corruption" target="_blank" class="card">
                         <div class="card-image ethics-bg"><i class="fa-solid fa-scale-balanced"></i></div>
                         <div class="card-info">
@@ -203,6 +227,7 @@
                             <p>Ethics & Anti-Corruption</p>
                         </div>
                     </a>
+
                 </div>
             </div>
 
@@ -276,18 +301,19 @@
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.15 
+            threshold: 0.15 // Trigger when 15% of the element is visible
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show-section');
-                    observer.unobserve(entry.target); 
+                    observer.unobserve(entry.target); // Stop watching once shown
                 }
             });
         }, observerOptions);
 
+        // Select all elements with hidden-section class
         const hiddenSections = document.querySelectorAll('.hidden-section');
         hiddenSections.forEach(section => {
             observer.observe(section);
