@@ -9,42 +9,124 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        .page-header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--text-white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .sub-title {
+            font-size: 1.5rem;
+            color: var(--netflix-red);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Stats Cards */
+        .stats-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, #1f1f1f, #141414);
+            padding: 25px;
+            border-radius: 12px;
+            flex: 1;
+            text-align: center;
+            border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--netflix-red);
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: white;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Content Box */
+        .info-box {
+            background-color: var(--bg-dark-gray);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--netflix-red);
+            margin-bottom: 40px;
+        }
+
+        /* Gallery Grid */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .gallery-card {
-            background-color: #181818; /* Dark gray background */
-            border-radius: 8px;
+            background-color: #181818;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             border: 1px solid #333;
+            position: relative;
         }
 
         .gallery-card:hover {
-            transform: translateY(-5px);
-            border-color: #E50914; /* Netflix Red on hover */
+            transform: scale(1.03);
+            border-color: var(--netflix-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 2;
         }
 
         .gallery-card img {
             width: 100%;
-            height: 200px; /* Fixed height for uniformity */
+            height: 220px;
             object-fit: cover;
             display: block;
+            transition: filter 0.3s;
+        }
+
+        .gallery-card:hover img {
+            filter: brightness(1.1);
         }
 
         .caption-box {
             padding: 15px;
-            text-align: center;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .caption-box p {
-            font-size: 0.9rem;
-            color: #b3b3b3;
+            font-size: 0.95rem;
+            color: #fff;
             margin: 0;
-            line-height: 1.4;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
     </style>
 </head>
@@ -52,89 +134,99 @@
 
     <nav class="navbar">
         <a href="index.html" class="logo">WFJ.</a>
-        <a href="index.html" class="btn btn-dark">Back to Home</a>
+        <a href="index.html" class="btn btn-dark"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
     </nav>
 
     <main>
-        <section class="content-block">
-            <h1 class="main-title" style="font-size: 3rem;">Kolej Matrikulasi Johor</h1>
-            <h2 class="sub-title">2024 - 2025</h2>
-            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+        
+        <div class="page-header">
+            <h1 class="main-title">Kolej Matrikulasi Johor</h1>
+            <div class="sub-title">2024 - 2025 • Physical Science</div>
+        </div>
 
-            <div class="grid-2-col">
-                <div>
-                    <h3 class="category-title" style="margin-top: 0;">Academic Result</h3>
-                    <div style="display: flex; gap: 10px;">
-                        <div style="background-color: var(--netflix-red); padding: 20px; border-radius: 4px; flex: 1;">
-                            <h2 style="color: white; font-size: 3.5rem; margin: 0;">3.92</h2>
-                            <p style="font-weight: bold;">CGPA</p>
-                        </div>
-                        <div style="background-color: #333; padding: 20px; border-radius: 4px; flex: 1;">
-                            <h2 style="color: white; font-size: 3.5rem; margin: 0;">4.0</h2>
-                            <p style="font-weight: bold;">MUET Band</p>
-                        </div>
+        <div class="grid-2-col" style="gap: 40px;">
+            
+            <div>
+                <h3 class="category-title" style="margin-top: 0;">Academic Achievements</h3>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-value" style="color: var(--netflix-red);">3.92</div>
+                        <div class="stat-label">CGPA Score</div>
                     </div>
+                    <div class="stat-card">
+                        <div class="stat-value">4.0</div>
+                        <div class="stat-label">MUET Band</div>
+                    </div>
+                </div>
 
-                    <p class="description" style="margin-top: 20px;">
-                        Specialized in Physical Science. My time at KMJ honed my analytical skills and discipline, preparing me for the rigors of a Computer Science degree.
+                <div class="info-box">
+                    <h4 style="color: white; margin-bottom: 10px; font-size: 1.2rem;">Overview</h4>
+                    <p class="description" style="margin-bottom: 0;">
+                        My tenure at KMJ was a pivotal period where I specialized in <strong>Physical Science</strong>. 
+                        The rigorous curriculum honed my analytical thinking and discipline, laying a solid foundation for my current pursuit in Data Engineering.
                     </p>
-                    
-                    <h3 class="category-title">Involvement</h3>
-                    <ul class="styled-list">
-                        <li><strong>Equipment Bureau:</strong> Committee Member for College Election</li>
-                    </ul>
                 </div>
                 
-                <div>
-                    <h3 class="category-title" style="margin-top: 0;">Matriculation Gallery</h3>
-                    <div class="gallery-grid">
-                        
-                        <div class="gallery-card">
-                            <img src="images/KMJ/Classmate Photo.jpg" alt="Classmate Photo">
-                            <div class="caption-box">
-                                <p>Classmate Photo</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-card">
-                            <img src="images/KMJ/Hari Raya At Madam Semah House.jpg" alt="Hari Raya At Madam Semah House">
-                            <div class="caption-box">
-                                <p>Hari Raya At Madam Semah House</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-card">
-                            <img src="images/KMJ/Helping Madam Semah Preparing food during hari raya.jpg" alt="Helping Madam Semah Preparing food">
-                            <div class="caption-box">
-                                <p>Helping Madam Semah Preparing food during hari raya</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-card">
-                            <img src="images/KMJ/Lunch together with classmate.jpg" alt="Lunch together with classmate">
-                            <div class="caption-box">
-                                <p>Lunch together with classmate</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-card">
-                            <img src="images/KMJ/MUET Groupmate.jpg" alt="MUET Groupmate">
-                            <div class="caption-box">
-                                <p>MUET Groupmate</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-card">
-                            <img src="images/KMJ/Watching Blood Brother With the bois.jpg" alt="Watching Blood Brother With the bois">
-                            <div class="caption-box">
-                                <p>Watching Blood Brother With the bois</p>
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="info-box" style="border-left-color: #fff;">
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.2rem;"><i class="fa-solid fa-trophy"></i> Involvement</h4>
+                    <ul class="styled-list">
+                        <li><strong>Equipment Bureau:</strong> Active Committee Member for the College Election process.</li>
+                        <li><strong>Competition:</strong> Participant in the Malaysian National Chemistry Quiz (2023).</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+            
+            <div>
+                <h3 class="category-title" style="margin-top: 0;">Life at KMJ</h3>
+                <div class="gallery-grid">
+                    
+                    <div class="gallery-card">
+                        <img src="images/KMJ/Classmate Photo.jpg" alt="Classmate Photo">
+                        <div class="caption-box">
+                            <p>Classmate Photo</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/KMJ/Hari Raya At Madam Semah House.jpg" alt="Hari Raya">
+                        <div class="caption-box">
+                            <p>Hari Raya @ Madam Semah's</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/KMJ/Helping Madam Semah Preparing food during hari raya.jpg" alt="Food Prep">
+                        <div class="caption-box">
+                            <p>Helping with Hari Raya Prep</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/KMJ/Lunch together with classmate.jpg" alt="Lunch">
+                        <div class="caption-box">
+                            <p>Lunch with Classmates</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/KMJ/MUET Groupmate.jpg" alt="MUET Group">
+                        <div class="caption-box">
+                            <p>MUET Groupmates</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/KMJ/Watching Blood Brother With the bois.jpg" alt="Movie Night">
+                        <div class="caption-box">
+                            <p>Movie Night: Blood Brother</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
