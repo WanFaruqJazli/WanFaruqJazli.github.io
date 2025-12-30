@@ -605,3 +605,23 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+/* --- MOBILE RESPONSIVENESS FOR BUTTONS --- */
+@media screen and (max-width: 768px) {
+    /* Target the container holding the buttons */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column; /* This forces them to stack vertically */
+        gap: 15px; /* Adds space between the buttons */
+        align-items: center; /* Centers the buttons */
+        width: 100%;
+        padding: 0 20px; /* Adds a little breathing room on the sides */
+    }
+
+    /* Target the specific buttons to make them look good on touch screens */
+    .hero-buttons .btn {
+        width: 100%; /* Makes buttons full width on phone */
+        max-width: 300px; /* Prevents them from getting too wide */
+        text-align: center;
+        display: block;
+    }
+}
