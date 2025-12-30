@@ -13,9 +13,10 @@
     <div class="menu-overlay" id="menuOverlay">
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
         <div class="menu-items">
-            <a href="about.html" onclick="toggleMenu()">About Me</a>
+            <a href="#about" onclick="toggleMenu()">About Me</a>
+            <a href="#skills" onclick="toggleMenu()">Skills</a>
+            <a href="#courses-section" onclick="toggleMenu()">Academic Courses</a>
             <a href="#education" onclick="toggleMenu()">Education Journey</a>
-            <a href="tis_coursework.html" onclick="toggleMenu()">TIS Assignments & Projects</a>
             <a href="mailto:wanfaruqjazli30@gmail.com">Contact</a>
         </div>
     </div>
@@ -54,117 +55,177 @@
     </header>
 
     <main>
-        <section id="coursework" class="category-row">
 
-            <h2 class="category-title">Coursework Repositories</h2>
+        <section id="about" class="content-block">
+            <h2 class="category-title">About Me</h2>
+            <div class="about-card">
+                <ul class="about-list">
+                    <li>
+                        <i class="fa-solid fa-graduation-cap icon-red"></i> 
+                        First-year Bachelor of Computer Science (Data Engineering) with Honors student at UTM (Cohort 10).
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-laptop-code icon-red"></i> 
+                        Interested in coding and continuously exploring new technical skills.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-layer-group icon-red"></i> 
+                        Currently learning C++, with plans to explore other programming languages.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-futbol icon-red"></i> 
+                        Enjoys indoor/outdoor sports and video games during free time.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-rocket icon-red"></i> 
+                        Aspires to become a Data Engineer and work at my dream company.
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <div class="card-scroller">
-
+        <section id="skills" class="content-block">
+            <h2 class="category-title">My Skills</h2>
+            <div class="skills-grid">
                 
-
-                <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECR1013-Digital-Logic" target="_blank" class="card">
-
-                    <div class="card-image logic-bg">
-
-                        <i class="fa-solid fa-microchip"></i>
-
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-computer"></i> Technical</h3>
+                    <div class="skill-item">
+                        <span>C++</span> <span class="badge">Basic</span>
                     </div>
-
-                    <div class="card-info">
-
-                        <h3>Digital Logic</h3>
-
-                        <p>Logic Gates & Circuits</p>
-
+                    <div class="skill-item">
+                        <span>Java</span> <span class="badge">Basic</span>
                     </div>
-
-                </a>
-
-
-
-                <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECJ1013-Programming-1" target="_blank" class="card">
-
-                    <div class="card-image cpp-bg">
-
-                        <i class="fa-solid fa-code"></i>
-
+                    <div class="skill-item">
+                        <span>Git / GitHub</span> <span class="badge">Basic</span>
                     </div>
-
-                    <div class="card-info">
-
-                        <h3>Programming Tech I</h3>
-
-                        <p>C++ Problem Solving</p>
-
+                    <div class="skill-item">
+                        <span>Microsoft Office</span> <span class="badge">Proficient</span>
                     </div>
-
-                </a>
-
-
-
-                <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECP1513-TIS" target="_blank" class="card">
-
-                    <div class="card-image tis-bg">
-
-                        <i class="fa-solid fa-network-wired"></i>
-
+                    <div class="skill-item">
+                        <span>CapCut</span> <span class="badge">Editing</span>
                     </div>
+                </div>
 
-                    <div class="card-info">
-
-                        <h3>Tech & Info Systems</h3>
-
-                        <p>Design Thinking & IS</p>
-
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-handshake"></i> Soft Skills</h3>
+                    <div class="skill-list-simple">
+                        <p>Teamwork</p>
+                        <p>Public Speaking</p>
+                        <p>Mentoring</p>
+                        <p>Problem-solving</p>
+                        <p>Communication</p>
                     </div>
+                </div>
 
-                </a>
-
-
-
-                <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECI1013-Discrete-Structure" target="_blank" class="card">
-
-                    <div class="card-image math-bg">
-
-                        <i class="fa-solid fa-diagram-project"></i>
-
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-language"></i> Languages</h3>
+                    <div class="skill-item">
+                        <span>Bahasa Melayu</span> <span class="badge gold">Native</span>
                     </div>
-
-                    <div class="card-info">
-
-                        <h3>Discrete Structure</h3>
-
-                        <p>Set Theory & Logic</p>
-
+                    <div class="skill-item">
+                        <span>English</span> <span class="badge dark">Fluent</span>
                     </div>
+                </div>
 
-                </a>
+            </div>
+        </section>
 
+        <section id="courses-section" class="category-row">
+            <h2 class="category-title">Academic Courses</h2>
 
-
-                <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/ULRS1032-Integrity%20and%20Anti-Corruption" target="_blank" class="card">
-
-                    <div class="card-image ethics-bg">
-
-                        <i class="fa-solid fa-scale-balanced"></i>
-
+            <div id="year-view" class="view-container">
+                <p class="view-subtitle">Select your academic year.</p>
+                <div class="year-grid">
+                    <div class="year-card active" onclick="showSemesters()">
+                        <div class="year-number">1</div>
+                        <div class="year-label">Year 1</div>
                     </div>
-
-                    <div class="card-info">
-
-                        <h3>Integrity</h3>
-
-                        <p>Ethics & Anti-Corruption</p>
-
+                    <div class="year-card locked">
+                        <i class="fa-solid fa-lock"></i>
+                        <div class="year-label">Year 2</div>
                     </div>
+                    <div class="year-card locked">
+                        <i class="fa-solid fa-lock"></i>
+                        <div class="year-label">Year 3</div>
+                    </div>
+                    <div class="year-card locked">
+                        <i class="fa-solid fa-lock"></i>
+                        <div class="year-label">Year 4</div>
+                    </div>
+                </div>
+            </div>
 
-                </a>
+            <div id="semester-view" class="view-container hidden">
+                <div class="nav-header">
+                    <button class="back-btn" onclick="showYears()"><i class="fa-solid fa-arrow-left"></i> Back to Years</button>
+                    <p class="view-subtitle">Year 1 - Select Semester</p>
+                </div>
+                
+                <div class="year-grid"> <div class="year-card active" onclick="showRepos()">
+                        <i class="fa-solid fa-book-open" style="font-size: 3rem; color: var(--netflix-red); margin-bottom: 10px;"></i>
+                        <div class="year-label">Semester 1</div>
+                    </div>
+                    <div class="year-card locked">
+                        <i class="fa-solid fa-lock"></i>
+                        <div class="year-label">Semester 2</div>
+                    </div>
+                </div>
+            </div>
 
+            <div id="repo-view" class="view-container hidden">
+                <div class="nav-header">
+                    <button class="back-btn" onclick="showSemesters()"><i class="fa-solid fa-arrow-left"></i> Back to Semesters</button>
+                    <p class="view-subtitle">Year 1 - Semester 1 Coursework</p>
+                </div>
 
+                <div class="card-scroller">
+                    
+                    <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECR1013-Digital-Logic" target="_blank" class="card">
+                        <div class="card-image logic-bg"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="card-info">
+                            <h3>Digital Logic</h3>
+                            <p>Logic Gates & Circuits</p>
+                        </div>
+                    </a>
 
+                    <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECJ1013-Programming-1" target="_blank" class="card">
+                        <div class="card-image cpp-bg"><i class="fa-solid fa-code"></i></div>
+                        <div class="card-info">
+                            <h3>Programming Tech I</h3>
+                            <p>C++ Problem Solving</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECP1513-TIS" target="_blank" class="card">
+                        <div class="card-image tis-bg"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="card-info">
+                            <h3>Tech & Info Systems</h3>
+                            <p>Design Thinking & IS</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/SECI1013-Discrete-Structure" target="_blank" class="card">
+                        <div class="card-image math-bg"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div class="card-info">
+                            <h3>Discrete Structure</h3>
+                            <p>Set Theory & Logic</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/WanFaruqJazli/Year1-Sem1-Coursework/tree/main/ULRS1032-Integrity%20and%20Anti-Corruption" target="_blank" class="card">
+                        <div class="card-image ethics-bg"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div class="card-info">
+                            <h3>Integrity</h3>
+                            <p>Ethics & Anti-Corruption</p>
+                        </div>
+                    </a>
+
+                </div>
             </div>
 
         </section>
+
         <section id="education" class="content-block">
             <h2 class="category-title">Education Journey</h2>
             <div class="list-container">
@@ -196,18 +257,6 @@
             </div>
         </section>
 
-        <section id="skills" class="content-block">
-            <h2 class="category-title">Top Skills</h2>
-            <div class="skills-tags">
-                <span class="tag red">C++</span>
-                <span class="tag red">Java</span>
-                <span class="tag gray">Visual Studio Code</span>
-                <span class="tag gray">Canva</span>
-                <span class="tag white">Bahasa Melayu</span>
-                <span class="tag white">English</span>
-            </div>
-        </section>
-
     </main>
 
     <footer>
@@ -222,6 +271,27 @@
         function toggleMenu() {
             const menu = document.getElementById('menuOverlay');
             menu.classList.toggle('active');
+        }
+
+        // Logic for Academic Courses Navigation
+        function showSemesters() {
+            document.getElementById('year-view').classList.add('hidden');
+            document.getElementById('semester-view').classList.remove('hidden');
+        }
+
+        function showYears() {
+            document.getElementById('semester-view').classList.add('hidden');
+            document.getElementById('year-view').classList.remove('hidden');
+        }
+
+        function showRepos() {
+            document.getElementById('semester-view').classList.add('hidden');
+            document.getElementById('repo-view').classList.remove('hidden');
+        }
+
+        function showSemestersFromRepo() { // Optional if you want back button on repo view to go to Semesters
+            document.getElementById('repo-view').classList.add('hidden');
+            document.getElementById('semester-view').classList.remove('hidden');
         }
     </script>
 </body>
